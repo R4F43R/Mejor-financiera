@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Gestor de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-tasks"></i> TaskMaster</h1>
+            <p>Organiza tus tareas de manera eficiente con nuestro gestor inteligente</p>
+        </header>
+        
+        <main>
+            <div class="app-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-plus-circle"></i> Nueva Tarea</h2>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <input type="text" id="taskInput" placeholder="Ingresa una nueva tarea...">
+                        <select id="categorySelect">
+                            <option value="personal">Personal</option>
+                            <option value="work">Trabajo</option>
+                            <option value="shopping">Compras</option>
+                            <option value="study">Estudio</option>
+                            <option value="other">Otro</option>
+                        </select>
+                        <select id="prioritySelect">
+                            <option value="low">Baja Prioridad</option>
+                            <option value="medium" selected>Media Prioridad</option>
+                            <option value="high">Alta Prioridad</option>
+                        </select>
+                        <button id="addButton">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                    </div>
+                    
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">
+                            <i class="fas fa-list"></i> Todas
+                        </button>
+                        <button class="filter-btn" data-filter="completed">
+                            <i class="fas fa-check-circle"></i> Completadas
+                        </button>
+                        <button class="filter-btn" data-filter="pending">
+                            <i class="fas fa-clock"></i> Pendientes
+                        </button>
+                        <button class="filter-btn secondary" id="clearBtn">
+                            <i class="fas fa-trash-alt"></i> Limpiar Todo
+                        </button>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-value" id="totalCount">0</div>
+                            <div class="stat-label">Tareas Totales</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="completedCount">0</div>
+                            <div class="stat-label">Completadas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="pendingCount">0</div>
+                            <div class="stat-label">Pendientes</div>
+                        </div>
+                    </div>
+                    
+                    <div class="tasks-section">
+                        <h3><i class="fas fa-clipboard-list"></i> Mis Tareas</h3>
+                        <ul id="taskList">
+                            <div class="empty-state">
+                                <i class="fas fa-inbox"></i>
+                                <p>¡No hay tareas todavía!</p>
+                                <p>Agrega tu primera tarea usando el formulario superior.</p>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>TaskMaster &copy; 2023 - Gestor de Tareas | Todas las tareas se guardan localmente en tu navegador</p>
+        </footer>
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
